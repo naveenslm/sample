@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Fund</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Customer list",customers_path,class: "navbar-brand" %>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li><%= link_to "Sign Up", new_customer_registration_path%></li>
+      <%if current_customer.present? %>
+      <li><%= link_to "log out", destroy_customer_session_path%></li>
+      <%else%>
+      <li><%= link_to "sign in", new_customer_session_path%></li>
+      <% end %>
+    </ul>
+</div>
+</nav>
+		<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+</html>
