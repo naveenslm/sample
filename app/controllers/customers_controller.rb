@@ -5,6 +5,8 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
+    @cs = Investment.where(customer_id: current_customer)
+  
   end
 
   # GET /customers/1

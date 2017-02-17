@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Schemes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scheme_id</th>
+      <th>Scheme_name</th>
+      <th>Year</th>
+      <th>Minimum</th>
+       <th>Lockin</th>
+       <th>Amc_id</th>
+      <th colspan="40"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schemes.each do |scheme| %>
+      <tr>
+        <td><%= scheme.id %></td>
+        <td><%= scheme.name %></td>
+        <td><%= scheme.year %></td>
+        <td><%= scheme.minimum %></td>
+        <td><%= scheme.lockin %></td>
+         <td><%= scheme.amc_id %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

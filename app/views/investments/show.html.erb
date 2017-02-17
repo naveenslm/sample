@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scheme:</strong>
+  <%= @investment.scheme_id %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @investment.customer_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @investment.date %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @investment.amount %>
+</p>
+
+<%= link_to 'Edit', edit_investment_path(@investment) %> |
+<%= link_to 'Back', customers_path %>
